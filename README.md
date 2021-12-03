@@ -15,8 +15,8 @@ Exception: The third consultation will be held on Thursday, 23.12.2021, instead 
 Please install the following tools:
 - Install the [latest version of NodeJS](https://nodejs.org/en/download/)
 - Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- Suggestion: Install a graphical git tool: e.g. (SourceTree)[https://www.sourcetreeapp.com/] or (GitHub Desktop)[https://desktop.github.com/]
-- Install a JS IDE: e.g. (Webstorm)[https://www.jetbrains.com/webstorm/download/] (Pro version is free of charge for students) or (Visual Studio Code)[https://code.visualstudio.com/download]
-- Install (Postman)[https://www.postman.com/downloads/]
+- Suggestion: Install a graphical git tool: e.g. [SourceTree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
+- Install a JS IDE: e.g. [Webstorm](https://www.jetbrains.com/webstorm/download/) (Pro version is free of charge for students) or [Visual Studio Code](https://code.visualstudio.com/download)
+- Install [Postman](https://www.postman.com/downloads/)
 
 \* I will be using SourceTree and Webstorm in our sessions
