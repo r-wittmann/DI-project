@@ -14,6 +14,8 @@ Exception: The third consultation will be held on Thursday, 23.12.2021, instead 
 ## Assignment until 15.12.2021
 For an introduction to React, please follow [this tutorial](https://reactjs.org/tutorial/tutorial.html). Please follow the "Setup Option 2" as you can familiarize yourself with your local coding environment that way. You don't need to implement the "Time Travel" feature (but you can, if you want to 😉)
 
+Please set up a mongoDB Database. As said in our session, you can either set it up locally, or use the [hosting service Atlas](https://account.mongodb.com/account/register). Detailed instructions can be found in ATLAS.md.
+
 ## Used Tools
 - [Latest version of NodeJS](https://nodejs.org/en/download/) \
   Node JS is the engine that allows us to run JavaScript files on our computers. It is needed for the development of our application.
