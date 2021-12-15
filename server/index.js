@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use("/items", itemsRouter);
 
-const CONNECTION_URL = "mongodb+srv://ray:ray1234@cluster0.sdytz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const CONNECTION_URL = "mongodb+srv://ray:ray1234@cluster0.sdytz.mongodb.net/shoppinglist?retryWrites=true&w=majority";
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         app.listen(PORT, () => {
