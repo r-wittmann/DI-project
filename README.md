@@ -11,6 +11,28 @@ Our live coding sessions will be held from 12:**00**pm to 1:**30**pm. Zoom Meeti
 I will be available for questions and problems every Friday from 3pm to 5pm. This is a voluntary offer to everyone. You can just join the Zoom Meeting and get help, if you are stuck somewhere. We will reuse the lecture Zoom meeting for the consultation, URL can be found in LSF.\
 Exception: The third consultation will be held on Thursday, 23.12.2021, instead of Friday.
 
+## Assignment until 22.12.2021
+Continue the implementation of our backend (API endpoints, controllers and data access). Similar to the */items* endpoints we created in today's tutorial, please implement the following:
+
+Add shopping lists to the application. Shopping lists have a name (listName: String) and a list of items as content (content: [String]). Please remember that we need a new collection in our database and API endpoints for accessing, creating and deleting lists.
+Additionally, we need to be able to modify lists (adding and removing items).
+
+Required endpoints:
+- GET /lists
+  Returns a list of all available shopping lists
+- POST /lists/create
+  Creates a new shopping list. Accepts the listName as a parameter
+- GET /list/:id
+  Returns a shopping list identified by the id
+- PUT /list/:id
+  Updates a shopping list, identified by its id. 
+- DELETE /lists/:id
+  Removes a shopping list from the database, identified by its id
+
+You can make use of the same code logic, as we implemented for the items. This is a bit more advanced than what we did in the tutorial, but everyone should be able to implement everything except the *PUT /list/:id* endpoint. That will take a bit of research and additional understanding 😉 
+
+Suggestion: Start by ignoring the content parameter and implement shopping lists with "listName" as its only attribute. Adding the content later simplifies the setup and helps to get the logic right.
+
 ## Assignment until 15.12.2021
 For an introduction to React, please follow [this tutorial](https://reactjs.org/tutorial/tutorial.html). Please follow the "Setup Option 2" as you can familiarize yourself with your local coding environment that way. You don't need to implement the "Time Travel" feature (but you can, if you want to 😉)
 
