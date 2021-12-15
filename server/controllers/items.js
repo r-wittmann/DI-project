@@ -1,5 +1,6 @@
 import Item from "../models/item.js";
 
+// requests and returns the list of all items from the database
 export const getItems = async (req, res) => {
     try {
         const items = await Item.find();
@@ -10,6 +11,7 @@ export const getItems = async (req, res) => {
     }
 }
 
+// creates a new item and saves it to the database
 export const createItem = async (req, res) => {
     const item = req.body;
     const newItem = new Item(item);
@@ -22,6 +24,7 @@ export const createItem = async (req, res) => {
     }
 }
 
+// gets and returns a single item from the database, identified by its id
 export const getItem = async (req, res) => {
     const id = req.params.id;
 
@@ -33,6 +36,7 @@ export const getItem = async (req, res) => {
     }
 }
 
+// deletes an item from the database, identified by its id
 export const deleteItem = async (req, res) => {
     const id = req.params.id;
 
