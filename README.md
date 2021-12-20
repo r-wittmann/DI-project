@@ -33,6 +33,9 @@ You can make use of the same code logic, as we implemented for the items. This i
 
 Suggestion: Start by ignoring the content parameter and implement shopping lists with "listName" as its only attribute. Adding the content later simplifies the setup and helps to get the logic right.
 
+**Update 20.12.2021:** I have pushed my suggestion for solving this assignment to the 
+repository.
+
 ## Assignment until 15.12.2021
 For an introduction to React, please follow [this tutorial](https://reactjs.org/tutorial/tutorial.html). Please follow the "Setup Option 2" as you can familiarize yourself with your local coding environment that way. You don't need to implement the "Time Travel" feature (but you can, if you want to 😉)
 
