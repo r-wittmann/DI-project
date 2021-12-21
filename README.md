@@ -20,11 +20,11 @@ Additionally, we need to be able to modify lists (adding and removing items).
 Required endpoints:
 - GET /lists
   Returns a list of all available shopping lists
-- POST /lists/create
+- POST /lists
   Creates a new shopping list. Accepts the listName as a parameter
-- GET /list/:id
+- GET /lists/:id
   Returns a shopping list identified by the id
-- PUT /list/:id
+- PUT /lists/:id
   Updates a shopping list, identified by its id. 
 - DELETE /lists/:id
   Removes a shopping list from the database, identified by its id
