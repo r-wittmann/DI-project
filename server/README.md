@@ -41,13 +41,16 @@ endpoints the application will have, once our project is completed:
 #### GET /items
 This endpoint returns a list of all items.
 
-#### POST /items/create
+#### POST /items
 This endpoint accepts a new item in the form of ```{"name":"Pizza"}```
 in the request body and adds it to the database.
 
 #### GET /items/:id
 This endpoint returns a single item, defined by its id as a url
 parameter.
+
+#### PUT /items/:id
+This endpoint accepts an updated item and updates corresponding item in the database.
 
 #### DELETE /items/:id
 This endpoint removes an item from the database, defined by its id 
@@ -57,7 +60,7 @@ as a url parameter.
 #### GET /lists
 This endpoint returns a list of all shopping lists.
 
-#### POST /lists/create
+#### POST /lists
 This endpoint accepts a new shopping list in the form of ```{"listName":"Home"}```
 in the request body and adds it to the database.
 

@@ -5,7 +5,6 @@ export const getItems = async (req, res) => {
     try {
         const items = await Item.find();
         res.status(200).json(items);
-
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
@@ -35,6 +34,20 @@ export const getItem = async (req, res) => {
         res.status(404).json({ message: e.message });
     }
 }
+
+// updates an item from the database, identified by its id
+export const updateItem = async (req, res) => {
+    const id = req.params.id;
+    const item = req.body;
+    
+    try {
+        const updatedItem = await Item.findByIdAndUpdate(id, item);
+        res.status(200).json(updatedItem);
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+}
+
 
 // deletes an item from the database, identified by its id
 export const deleteItem = async (req, res) => {
