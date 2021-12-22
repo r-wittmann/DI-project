@@ -11,6 +11,16 @@ Our live coding sessions will be held from 12:**00**pm to 1:**30**pm. Zoom Meeti
 I will be available for questions and problems every Friday from 3pm to 5pm. This is a voluntary offer to everyone. You can just join the Zoom Meeting and get help, if you are stuck somewhere. We will reuse the lecture Zoom meeting for the consultation, URL can be found in LSF.\
 Exception: The third consultation will be held on Thursday, 23.12.2021, instead of Friday.
 
+## Assignment until 12.01.2022
+1. We are currently saving plain text passwords to the database, which is an absolute no-go from a security perspective.
+Please change our server so that passwords are hashed. Please use the bcrypt framework for hashing. 
+You can use [this hashing tutorial](https://dev.to/aditya278/understanding-and-implementing-password-hashing-in-nodejs-2m84#) as an inspiration
+2. We implemented sign up and login functionality and generate a JWT token for a successful login. 
+A check for the validity of this token needs to be added to every API endpoint. You can refer to
+[this JWT tutorial](https://stackabuse.com/authentication-and-authorization-with-jwts-in-express-js/) for inspiration.
+
+Please be aware that I will be available for consultation on Thursday, 23.12.2021 and Monday, 10.01.2022 from 3pm to 5pm.
+
 ## Assignment until 22.12.2021
 Continue the implementation of our backend (API endpoints, controllers and data access). Similar to the */items* endpoints we created in today's tutorial, please implement the following:
 

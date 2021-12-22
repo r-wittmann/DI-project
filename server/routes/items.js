@@ -7,7 +7,7 @@ const router = express.Router();
 // define routes and what logic they should connect to
 // adding a /:id to the route means that I can call /items/abcd in the
 // browser and the application interprets "abcd" as a parameter called id
-router.get('/', getItems);
+router.get("/", getItems);
 router.post("/", createItem);
 router.get("/:id", getItem);
 router.put("/:id", updateItem);
