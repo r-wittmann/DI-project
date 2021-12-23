@@ -1,12 +1,16 @@
 import User from "../models/user.js";
-import {generateJWT} from "../services/authentication.js";
+import {comparePassword, generateHash, generateJWT} from "../services/authentication.js";
 
 // accepts a username and password and creates a new user
 // username is checked for uniqueness against the database
 // when successful, an authentication token is generated and returned
 export const signUp = async (req, res) => {
     const body = req.body;
-    const newUser = new User(body);
+    const username = body.username;
+    const password = body.password;
+
+    const hash = await generateHash(password);
+    const newUser = new User({ username, password: hash });
 
     try {
         await newUser.save();
@@ -25,8 +29,8 @@ export const login = async (req, res) => {
     const password = body.password;
 
     try {
-        const user = await User.findOne({ username, password });
-        if (user != null) {
+        const user = await User.findOne({ username });
+        if (user && await comparePassword(password, user.password)) {
             const token = generateJWT(user);
             res.status(200).json({ token });
         } else {
