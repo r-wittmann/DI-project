@@ -8,6 +8,26 @@ export const generateJWT = (user) => {
     return jwt.sign({ username: user.username }, accessTokenSecret);
 }
 
+// checks for the existence and validity of the jwt token
+// continues with the request when authorized, returns an error, if not
+export const authenticateJWT = (req, res, next) => {
+    const authHeader = req.headers.authorization;
+
+    if (authHeader) {
+        const token = authHeader.split(' ')[1];
+        jwt.verify(token, accessTokenSecret, (err, content) => {
+            if (err) {
+                return res.sendStatus(403);
+            }
+            // save the username from the token to the request object for later use
+            req.username = content.username;
+            next();
+        });
+    } else {
+        res.sendStatus(401);
+    }
+};
+
 // generates a hash of the provided password for saving it to the database
 export const generateHash = async (password) => {
     return await bcrypt.hash(password, 12);

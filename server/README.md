@@ -33,8 +33,10 @@ will run on localhost:5555.
 
 ## API Endpoints
 Our application will have several API endpoints that are used to
-get, create, modify and delete objects. Here is a list of all 
-endpoints the application will have, once our project is completed:
+get, create, modify and delete objects. A caller needs to provide
+a valid JWT token to be granted access to all endpoints except the
+signup and login ones. Here is a list of all endpoints the 
+application will have, once our project is completed:
 
 ### /items
 
