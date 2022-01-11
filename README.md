@@ -21,6 +21,9 @@ A check for the validity of this token needs to be added to every API endpoint. 
 
 Please be aware that I will be available for consultation on Thursday, 23.12.2021 and Monday, 10.01.2022 from 3pm to 5pm.
 
+**Update 11.01.2022:** I have pushed my suggestion for solving this assignment to the
+repository.
+
 ## Assignment until 22.12.2021
 Continue the implementation of our backend (API endpoints, controllers and data access). Similar to the */items* endpoints we created in today's tutorial, please implement the following:
 
