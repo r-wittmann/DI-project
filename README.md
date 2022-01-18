@@ -18,6 +18,9 @@ please implement the signup functionality.
 As mentioned in the session, this week's consultation will start about 30 minutes later due to 
 a prior meeting that I need to attend to.
 
+**Update 18.01.2022:** I have pushed my suggestion for solving this assignment to the
+repository.
+
 ## Assignment until 12.01.2022
 1. We are currently saving plain text passwords to the database, which is an absolute no-go from a security perspective.
 Please change our server so that passwords are hashed. Please use the bcrypt framework for hashing. 
