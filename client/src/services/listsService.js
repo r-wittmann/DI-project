@@ -14,3 +14,30 @@ export const getListsBackend = async () => {
     );
     return await response.json();
 }
+
+export const addListBackend = async (listName) => {
+    const token = getToken();
+    const response = await fetch("http://localhost:5555/lists", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + token
+            },
+            body: JSON.stringify({listName})
+        }
+    );
+    return response.ok;
+}
+
+export const removeListBackend = async (listId) => {
+    const token = getToken();
+    const response = await fetch("http://localhost:5555/lists/" + listId, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + token
+            },
+        }
+    );
+    return response.ok;
+}
