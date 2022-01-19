@@ -51,6 +51,7 @@ export default class ShoppingLists extends Component {
                         {this.state.lists.map(shoppingList =>
                             <div key={shoppingList._id}>
                                 {shoppingList.listName}
+                                <button onClick={() => window.location = "/lists/" + shoppingList._id}>View</button>
                                 <button onClick={() => this.removeList(shoppingList)}>Remove</button>
                             </div>
                         )}
