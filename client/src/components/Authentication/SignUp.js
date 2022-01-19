@@ -15,7 +15,11 @@ export default class SignUp extends Component {
 
         const success = await signUpBackend(this.state.username, this.state.password);
 
-        console.log(success);
+        if (success) {
+            window.location = "/lists";
+        } else {
+            console.log("Something went wrong");
+        }
     }
 
     render() {
