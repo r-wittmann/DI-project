@@ -54,3 +54,17 @@ export const getListBackend = async (listId) => {
     );
     return await response.json();
 }
+
+export const updateListBackend = async (list) => {
+    const token = getToken();
+    const response = await fetch("http://localhost:5555/lists/" + list._id, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer: ' + token
+        },
+        body: JSON.stringify(list)
+    });
+    return response.ok;
+}
+

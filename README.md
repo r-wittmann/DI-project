@@ -14,6 +14,9 @@ Exception: The third consultation will be held on Thursday, 23.12.2021, instead 
 ## Assignment until 26.01.2022
 Please implement the removing of items from a shopping list.
 
+**Update 24.01.2022:** I have pushed my suggestion for solving this assignment to the
+repository.
+
 ## Assignment until 19.01.2022
 Similar to the login functionality, which we implemented in the frontend in our session, 
 please implement the signup functionality.
