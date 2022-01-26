@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {getListBackend, updateListBackend} from "../../services/listsService.js";
 import {getItemsBackend} from "../../services/itemsService.js";
+import Item from "./Item.js";
 
 export default class ShoppingList extends Component {
     constructor(props) {
@@ -24,7 +25,6 @@ export default class ShoppingList extends Component {
 
     getItems = async () => {
         const items = await getItemsBackend();
-        console.log(items);
         this.setState({items});
     }
 
@@ -49,7 +49,7 @@ export default class ShoppingList extends Component {
 
     addItem = async (item) => {
         const oldItems = this.state.list.content;
-        const newItems = oldItems.concat([item.name])
+        const newItems = oldItems.concat([item])
 
         await this.updateList(newItems);
     }
@@ -58,21 +58,20 @@ export default class ShoppingList extends Component {
         return (
             <>
                 <h2>{this.state.list ? this.state.list.listName : "Loading..."}</h2>
-                {this.state.list && this.state.list.content.map(item =>
-                    <div key={item}>
-                        <span>{item}</span>
-                        <button onClick={() => this.removeItem(item)}>Remove</button>
-                    </div>
-                )}
+                <div style={{display: "flex", flexWrap: "wrap"}}>
+                    {this.state.list && this.state.list.content.map(item =>
+                        <Item key={item} itemName={item} handleClick={this.removeItem}/>
+                    )}
+                </div>
+
                 <h3>Items</h3>
-                {this.state.items
-                    .filter(item => !this.state.list.content.includes(item.name))
-                    .map(item =>
-                    <div key={item._id}>
-                        <span>{item.name}</span>
-                        <button onClick={() => this.addItem(item)}>Add</button>
-                    </div>
-                )}
+                <div style={{display: "flex", flexWrap: "wrap"}}>
+                    {this.state.items
+                        .filter(item => !this.state.list.content.includes(item.name))
+                        .map(item =>
+                            <Item key={item._id} itemName={item.name} handleClick={this.addItem}/>
+                        )}
+                </div>
             </>
         )
     }
